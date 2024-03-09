@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 
 export class Counter extends Component {
-  static displayName = Counter.name;
+    static displayName = Counter.name;
+
 
   constructor(props) {
     super(props);
@@ -13,7 +14,9 @@ export class Counter extends Component {
     this.setState({
       currentCount: this.state.currentCount + 1
     });
-  }
+    }
+
+   
 
   render() {
     return (

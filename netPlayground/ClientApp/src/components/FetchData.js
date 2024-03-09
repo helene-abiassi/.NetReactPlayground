@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Rank from '../components/Rank'
 
 export class FetchData extends Component {
   static displayName = FetchData.name;
@@ -13,7 +14,8 @@ export class FetchData extends Component {
   }
 
   static renderForecastsTable(forecasts) {
-    return (
+      return (
+<>
       <table className="table table-striped" aria-labelledby="tableLabel">
         <thead>
           <tr>
@@ -33,7 +35,10 @@ export class FetchData extends Component {
             </tr>
           )}
         </tbody>
-      </table>
+        </table>
+
+              <Rank />
+          </>
     );
   }
 

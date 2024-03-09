@@ -8,7 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace netPlayground.Controllers.Models
 {
-    public class ItemController : Controller
+    [ApiController]
+    [Route("[controller")]
+    public class ItemController : Controller //ControllerBase
     {
         // GET: /<controller>/
         public IActionResult Index()
@@ -16,6 +18,20 @@ namespace netPlayground.Controllers.Models
             return View();
 
         }
-    }
+
+        private static readonly IEnumerable<ItemModel> Items = new[]
+        {
+            new ItemModel{Id=1, Title = "Princess Bride", ImageId=1, Ranking=0, ItemType=1 },
+            new ItemModel{Id=2, Title = "Casablanca", ImageId=1, Ranking=0, ItemType=1 },
+
+        };
+
+        [HttpGet("{itemType:int}")] //This will be equivalent in client to fetch('item/${itemType})
+        public ItemModel[] Get(int itemType)
+        {
+            ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
+            return items;
+        }
+    } 
 }
 

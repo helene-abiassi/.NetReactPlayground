@@ -1,4 +1,4 @@
 ﻿<Properties StartupConfiguration="{CD4E128B-AC39-467B-84A2-E507A95B8809}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.netPlayground FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.netPlayground PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
