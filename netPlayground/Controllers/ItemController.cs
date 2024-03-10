@@ -22,7 +22,7 @@ namespace netPlayground.Controllers.Models
         private static readonly IEnumerable<ItemModel> Items = new[]
         {
             new ItemModel{Id =1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
-            new ItemModel{Id =2, Title = "Highlander", ImageId=2, Ranking=0,ItemType=1 },
+            new ItemModel{Id =2, Title = "Casablanca", ImageId=2, Ranking=0,ItemType=1 },
 
         };
 
@@ -30,6 +30,7 @@ namespace netPlayground.Controllers.Models
         public ItemModel[] Get(int itemType)
         {
             ItemModel[] items = Items.Where(i => i.ItemType == itemType).ToArray();
+            System.Threading.Thread.Sleep(2000);
             return items;
         }
     } 

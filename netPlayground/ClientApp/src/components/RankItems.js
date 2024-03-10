@@ -27,7 +27,7 @@ const RankItems = () => {
             
 
             {
-                items ? items.map((item) => 
+                (items.length >0) ? items.map((item) => 
                     <h3>{item.title}</h3>
                 ) : <div>Loading...</div>
                 }
