@@ -9,20 +9,20 @@ using Microsoft.AspNetCore.Mvc;
 namespace netPlayground.Controllers.Models
 {
     [ApiController]
-    [Route("[controller")]
-    public class ItemController : Controller //ControllerBase
+    [Route("[controller]")]
+    public class ItemController : ControllerBase //ControllerBase
     {
         // GET: /<controller>/
-        public IActionResult Index()
-        {
-            return View();
+        //public IActionResult Index()
+        //{
+        //    return View();
 
-        }
+        //}
 
         private static readonly IEnumerable<ItemModel> Items = new[]
         {
-            new ItemModel{Id=1, Title = "Princess Bride", ImageId=1, Ranking=0, ItemType=1 },
-            new ItemModel{Id=2, Title = "Casablanca", ImageId=1, Ranking=0, ItemType=1 },
+            new ItemModel{Id =1, Title = "The Godfather", ImageId=1, Ranking=0,ItemType=1 },
+            new ItemModel{Id =2, Title = "Highlander", ImageId=2, Ranking=0,ItemType=1 },
 
         };
 

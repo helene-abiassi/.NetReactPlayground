@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Rank from '../components/Rank'
 
 export class FetchData extends Component {
   static displayName = FetchData.name;
@@ -36,8 +35,6 @@ export class FetchData extends Component {
           )}
         </tbody>
         </table>
-
-              <Rank />
           </>
     );
   }
